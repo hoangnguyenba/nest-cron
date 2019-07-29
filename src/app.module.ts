@@ -1,14 +1,11 @@
 import { Module } from '@nestjs/common';
 import { ScheduleModule } from 'nest-schedule';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { ScheduleService } from './schedule.service';
 
 @Module({
   imports: [
     ScheduleModule.register(),
   ],
-  controllers: [AppController],
-  providers: [AppService, ScheduleService],
+  providers: [ScheduleService],
 })
 export class AppModule {}

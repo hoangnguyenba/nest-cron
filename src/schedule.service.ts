@@ -3,8 +3,7 @@ import { Cron, Interval, Timeout, NestSchedule } from 'nest-schedule';
 
 @Injectable() // Only support SINGLETON scope
 export class ScheduleService extends NestSchedule {    
-  @Cron('0 * * * *', {
-    startTime: new Date(),
+  @Cron('* * * * *', {
     immediate: true
   })
   async cronJob() {
